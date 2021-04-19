@@ -9,13 +9,15 @@ class PostsController < ApplicationController
         if @post.save
             render json: @post
         else
-            render json: {error: 'Error Submitting Post'}    
+            render json: {error: 'Error Submitting Post'}
+        end       
     end
 
     # def destroy
     #     @post = Post.find(params[:id])
     #     @post.destroy
-    # end    
+    # end
+    #not used
 
     
     private
