@@ -43,7 +43,8 @@ class App extends React.Component {
 
 export default connect(null, {fetchPosts})(App);
 
+//first arg null, reserved for mapStateToProps, but we are not accessing store here
 //putting fetch posts directly as second arg, could also mapDispatchToProps there
-//point is to be able to call this.props.fetchPosts when component mounts in order to fetch our data from here
+//point is to be able to call this.props.fetchPosts when component mounts in order to fetch our data
 //connect is letting us do that, but it wants to dispatch right away, before our data is retrieved from backend
 //that's why we use thunk, it allows us to be async, we can call dispatch in fetchPosts action when the data is ready
