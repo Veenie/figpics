@@ -5,10 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
-import { applyMiddleware, createStore, compose } from 'redux';
+import { applyMiddleware, createStore, compose } from 'redux'
+import postReducer from './reducers/postReducer'
 
 let enhancer =  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-let store = createStore(reducer, enhancer(applyMiddleware(thunk)))
+
+//for our dev tools and middleware
+
+let store = createStore(postReducer, enhancer(applyMiddleware(thunk)))
+
+
 
 ReactDOM.render(
   <Provider store={store} >
@@ -16,6 +22,8 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+
+//Provider lets us pass our store down to children
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
