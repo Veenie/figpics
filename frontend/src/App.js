@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react'
 import {connect} from 'react-redux'
-import { fetchPosts } from './actions/postAction';
+import { fetchPosts } from './actions/fetchPosts';
 
 class App extends React.Component {
   
@@ -14,6 +14,10 @@ class App extends React.Component {
 
   // }
   //testing out backend/frontend connection
+
+  componentDidMount(){
+    this.props.fetchPosts()
+  }
   render () {
     return (
     <div className="App">
@@ -40,3 +44,6 @@ class App extends React.Component {
 export default connect(null, {fetchPosts})(App);
 
 //putting fetch posts directly as second arg, could also mapDispatchToProps there
+//point is to be able to call this.props.fetchPosts when component mounts in order to fetch our data from here
+//connect is letting us do that, but it wants to dispatch right away, before our data is retrieved from backend
+//that's why we use thunk, it allows us to be async, we can call dispatch in fetchPosts action when the data is ready
