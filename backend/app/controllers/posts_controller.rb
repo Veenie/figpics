@@ -5,6 +5,7 @@ class PostsController < ApplicationController
     end
     
     def create
+        binding.pry
         @post = Post.new(post_params)
         if @post.save
             render json: @post
