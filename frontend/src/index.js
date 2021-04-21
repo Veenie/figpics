@@ -23,7 +23,7 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-//Provider lets us pass our store down to children
+//Provider lets us pass our store down to App and it's children
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
