@@ -5,7 +5,7 @@ class PostsController < ApplicationController
     end
     
     def create
-        binding.pry
+        #binding.pry
         @post = Post.new(post_params)
         if @post.save
             render json: @post
@@ -13,6 +13,8 @@ class PostsController < ApplicationController
             render json: {error: 'Error Submitting Post'}
         end       
     end
+
+    #pry to check our params to see if frontend data is coming in
 
     # def destroy
     #     @post = Post.find(params[:id])

@@ -10,12 +10,11 @@ const PostList = (props) => {
 
     return(
         <div>
-            {props.posts.map(post => post.name
+            {props.posts.map(post => <li>{post.name}: {post.text}</li>
             
 
-                // <img src='https://ibb.co/fqjm8Nx' alt='logl' key={post.id}/>
                 )}
-
+<br/>
         </div>
     )
 }
