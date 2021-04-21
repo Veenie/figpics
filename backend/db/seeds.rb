@@ -6,4 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-a = Post.create(name: 'John', url: 'https://images.app.goo.gl/LT8tqaQ1NQPamJue7')
+a = Post.create(name: 'John', text: 'hello')
