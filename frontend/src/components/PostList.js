@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Post from './Post'
 
 
 const PostList = (props) => {
@@ -10,7 +10,7 @@ const PostList = (props) => {
 
     return(
         <div>
-            {props.posts.map(post => <li>{post.name}: {post.text}</li>
+            {props.posts.map(post => <p key={post.id}><Post post={post}/></p>
             
 
                 )}
