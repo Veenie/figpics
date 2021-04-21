@@ -15,9 +15,9 @@ class App extends React.Component {
   // }
   //testing out backend/frontend connection
 
-  componentDidMount(){
-    this.props.fetchPosts()
-  }
+  // componentDidMount(){
+  //   this.props.fetchPosts()
+  // }
   render () {
     return (
     <div className="App">

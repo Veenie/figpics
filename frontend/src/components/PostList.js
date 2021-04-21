@@ -2,9 +2,19 @@ import React from 'react'
 
 
 
-const PostList = () => {
+const PostList = (props) => {
+    // console.log(props)
+
+    
+
+
     return(
         <div>
+            {props.posts.map(post => post.name
+            
+
+                // <img src='https://ibb.co/fqjm8Nx' alt='logl' key={post.id}/>
+                )}
 
         </div>
     )

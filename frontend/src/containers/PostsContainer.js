@@ -14,7 +14,7 @@ class PostsContainer extends React.Component {
     render () {
         return (
             <div>
-                <PostList />
+                <PostList posts={this.props.posts}/>
                 <PostInput />
             </div>
         )
@@ -30,6 +30,9 @@ const mapStateToProps = globalState => {
     }
 }
 
-//this allows children to access the current state of the global store
+//this allows children of this container to access the current state of the global store (allows us to use this.props.posts)
 
 export default connect(mapStateToProps, {fetchPosts})(PostsContainer)
+
+//above used to connect to global store, first arg allows access to current global state 
+//second is dispatch, allows changes to be made in children by dispatching actions (which is then sent to reducer to update global state)
