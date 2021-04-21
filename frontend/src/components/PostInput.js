@@ -30,12 +30,15 @@ class PostInput extends React.Component {
         //debugger
         event.preventDefault()
         this.props.addPost(this.state)
+        this.setState({name: '', text: ''})
     }
 
     //onSubmit put in form tag so it listens to whole form
     //upon submission, connect to proper action to add post to db
     //prevent default to stop redirect
     //we send the state as it is upon submission (changed by the form inputs) to addPost action
+    //set state back to empty strings to clear out form
+    //set state is async so we could even put it higher and it won't interfere
 
     
     render () {
@@ -57,4 +60,3 @@ export default connect(null, {addPost})(PostInput)
 
 //first arg is null, don't need to mapstatetoprops, not using or displaying current global state
 //but need that null there so we can use second arg because dispatch needed, want to send form data down the chain of action, reducer, persist to db
-//
