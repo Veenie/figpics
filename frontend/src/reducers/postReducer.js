@@ -1,9 +1,9 @@
 export default function postReducer(state = {posts: []}, action) {
-    debugger
+    //debugger
     switch (action.type) {
 
         case 'FETCH_POSTS':
-            return state
+            return {posts: action.payload}
 
 
         default:
@@ -15,3 +15,4 @@ export default function postReducer(state = {posts: []}, action) {
 
 //state initially set as object with posts key pointing to empty array
 //set default in switcher to return state so something is always returned
+//in fetch posts, new state is set to the payload from fetch rather than empty array
