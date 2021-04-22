@@ -3,7 +3,7 @@ import PostList from '../components/PostList'
 import PostInput from '../components/PostInput'
 import {connect} from 'react-redux'
 import {fetchPosts} from '../actions/fetchPosts'
-
+import {Route} from 'react-router-dom'
 
 
 class PostsContainer extends React.Component {
@@ -14,9 +14,8 @@ class PostsContainer extends React.Component {
     render () {
         return (
             <div>
-                <PostInput />
-                <PostList posts={this.props.posts}/>
-                
+                <Route path='/posts/new' component={PostInput}/>
+                <Route exact path='/posts' render={ () => <PostList posts={this.props.posts}/> } />  
             </div>
         )
     }
@@ -24,6 +23,10 @@ class PostsContainer extends React.Component {
 
 //render method required, it's a class
 // when importing, double period to get from different folder, also getting the names right
+//putting our routes here because this is where access to store is given
+//using render on second route because we are passing props (just put previous code inside of it)
+//need to use exact path, or else there's confusion with both having 'posts'
+//read on exact path and nested routes
 
 const mapStateToProps = globalState => {
     return {
