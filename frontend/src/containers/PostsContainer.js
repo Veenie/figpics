@@ -4,6 +4,9 @@ import PostInput from '../components/PostInput'
 import {connect} from 'react-redux'
 import {fetchPosts} from '../actions/fetchPosts'
 import {Route} from 'react-router-dom'
+import Home from '../components/Home'
+import About from '../components/About'
+import Navbar from '../components/NavBar'
 
 
 class PostsContainer extends React.Component {
@@ -14,6 +17,9 @@ class PostsContainer extends React.Component {
     render () {
         return (
             <div>
+                <Navbar />
+                <Route exact path="/" component={Home} />
+                <Route exact path="/about" component={About} />
                 <Route path='/posts/new' component={PostInput}/>
                 <Route exact path='/posts' render={ () => <PostList posts={this.props.posts}/> } />  
             </div>
