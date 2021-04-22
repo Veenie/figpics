@@ -1,8 +1,8 @@
 // import logo from './logo.svg';
 import './App.css';
 import React from 'react'
-import {connect} from 'react-redux'
-import { fetchPosts } from './actions/fetchPosts';
+// import {connect} from 'react-redux'
+// import { fetchPosts } from './actions/fetchPosts';
 import PostsContainer from './containers/PostsContainer'
 class App extends React.Component {
   
@@ -15,21 +15,18 @@ class App extends React.Component {
   // }
   //testing out backend/frontend connection
 
-  // componentDidMount(){
-  //   this.props.fetchPosts()
-  // }
+
   render () {
     return (
     <div className="App">
       <PostsContainer />
-
     </div>
   );
 }
 
 }
 
-export default connect(null, {fetchPosts})(App);
+export default App;
 
 //first arg null, reserved for mapStateToProps, but we are not accessing store here
 //putting fetch posts directly as second arg, could also mapDispatchToProps there
