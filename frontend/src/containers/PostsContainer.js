@@ -3,7 +3,7 @@ import PostList from '../components/PostList'
 import PostInput from '../components/PostInput'
 import {connect} from 'react-redux'
 import {fetchPosts} from '../actions/fetchPosts'
-
+import {Route} from 'react-router-dom'
 
 
 class PostsContainer extends React.Component {
@@ -14,8 +14,8 @@ class PostsContainer extends React.Component {
     render () {
         return (
             <div>
-                <PostInput/>
-                <PostList posts={this.props.posts}/>
+                <Route path='/posts/new' component={PostInput}/>
+                <Route exact path='/posts' render={ () => <PostList posts={this.props.posts}/> } />  
             </div>
         )
     }

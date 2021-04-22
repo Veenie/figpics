@@ -4,7 +4,6 @@ import React from 'react'
 // import {connect} from 'react-redux'
 // import { fetchPosts } from './actions/fetchPosts';
 import PostsContainer from './containers/PostsContainer'
-import {Route} from 'react-router-dom'
 class App extends React.Component {
   
   
@@ -20,7 +19,7 @@ class App extends React.Component {
   render () {
     return (
     <div className="App">
-      <Route path='/posts' component={PostsContainer}/>
+      <PostsContainer />
     </div>
   );
 }
