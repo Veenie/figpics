@@ -3,7 +3,7 @@ import Post from './Post'
 
 
 const PostList = (props) => {
-    console.log(props)
+    //console.log(props)
 
     
 
@@ -11,10 +11,8 @@ const PostList = (props) => {
     return(
 
         <div>
-            {props.posts.map(post => <p key={post.id}><Post post={post}/></p>
-            
-
-                )}
+            {props.posts.map(post => 
+            <div key={post.id}><Post post={post}/></div>)}
 <br/>
         </div>
     )
