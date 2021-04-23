@@ -16,7 +16,6 @@ class App extends React.Component {
   //   fetch('http://localhost:3001/posts', {method: 'GET'})
   //   .then(response => response.json())
   //   .then(data => console.log(data))
-
   // }
   //testing out backend/frontend connection
 
