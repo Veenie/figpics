@@ -3,9 +3,9 @@ import React from 'react'
 const Post = (props) => {
 //console.log(props)
 return (
-    <div>
+    <li>
         {props.post.text} -{props.post.name}
-    </div>
+    </li>
 )
 }
 

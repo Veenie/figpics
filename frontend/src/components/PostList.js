@@ -3,7 +3,7 @@ import Post from './Post'
 
 
 const PostList = (props) => {
-    // console.log(props)
+    console.log(props)
 
     
 
