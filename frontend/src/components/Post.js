@@ -3,9 +3,14 @@ import React from 'react'
 const Post = (props) => {
 //console.log(props)
 return (
-    <li>
-        {props.post.text} -{props.post.name}
-    </li>
+    <div className='post'>
+    <h3>
+        {props.post.text}
+    </h3>
+    <footer>- {props.post.name}</footer>
+    
+    </div>
+    
 )
 }
 
