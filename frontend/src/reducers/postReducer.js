@@ -5,7 +5,10 @@ export default function postReducer(state = {posts: []}, action) {
         case 'FETCH_POSTS':
             return {posts: action.payload}
         case 'ADD_POST':
-            return {...state, posts: [...state.posts, action.payload] } 
+            return {...state, posts: [...state.posts, action.payload] }
+        // case 'DELETE_POST':
+        //     const bands = state.posts.filter(band => band.id !== action.payload.id);
+        //     return { bands };
         default:
             return state
     }

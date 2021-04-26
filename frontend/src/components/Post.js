@@ -7,9 +7,7 @@ return (
     <h3>
         {props.post.text}
     </h3>
-    <footer>- {props.post.name}</footer>
-    
-    </div>
+    <footer>- {props.post.name}</footer></div>
     
 )
 }
