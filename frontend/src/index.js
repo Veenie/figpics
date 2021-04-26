@@ -15,6 +15,10 @@ let enhancer =  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 let store = createStore(postReducer, enhancer(applyMiddleware(thunk)))
 
+//create store returns our store object (global state)
+//we want to pass this down through our app so it's available throughout
+//reducer function required, using optional enhancer argument here to enable thunk middleware
+
 
 
 ReactDOM.render(
@@ -26,7 +30,9 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-//Provider lets us pass our store down to App and it's children
+//Provider gives us the ability to pass our store down to App and it's children
+//we will need to use connect in the components themselves to be able to do this
+//wrap App in router so we can set url paths
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

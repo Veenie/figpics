@@ -9,6 +9,7 @@ export function fetchPosts() {
 }
 }
 
-//action creator makes action objects to dispatch to reducer, objects used as criteria for changing global state
+//action creator makes action objects to use as arguments in dispatch to reducer, objects used as criteria for changing global state
 //using thunk, dispatch used as the argument of anon function, now dispatch occurs after post data returns
-//type required in dispatch, post data is the payload, for reducer
+//type required in actions, post data is the payload, for reducer
+//goal here is to fetch from the backend and pass the data to front end store

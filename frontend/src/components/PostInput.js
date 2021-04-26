@@ -61,4 +61,4 @@ class PostInput extends React.Component {
 export default connect(null, {addPost})(PostInput)
 
 //first arg is null, don't need to mapstatetoprops, not using or displaying current global state
-//but need that null there so we can use second arg because dispatch needed, want to send form data down the chain of action, reducer, persist to db
+//but need that null there so we can use second arg because dispatch needed, want to send form data
