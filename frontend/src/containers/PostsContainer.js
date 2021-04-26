@@ -4,6 +4,7 @@ import PostInput from '../components/PostInput'
 import {connect} from 'react-redux'
 import {fetchPosts} from '../actions/fetchPosts'
 
+
 // when importing, double period to get from different folder, also getting the names right
 
 

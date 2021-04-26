@@ -50,8 +50,6 @@ class PostInput extends React.Component {
                     <input type='text' placeholder='Who said it?' value={this.state.name} name="name" onChange={this.handleChange}/><br/>
                     <input type='text' placeholder='One-Liner' value={this.state.text} name="text" onChange={this.handleChange}/><br/>
                     <input type='submit' />
-
-
                 </form>
             </div>
         )
