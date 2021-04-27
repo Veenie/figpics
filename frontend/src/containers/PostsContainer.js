@@ -45,6 +45,7 @@ export default connect(mapStateToProps, {fetchPosts})(PostsContainer)
 //above used to connect to global store, first arg is reserved for mapstatetoprops, allows access to current global state 
 //second is dispatch, allows changes to be made in children by dispatching actions (which is then sent to reducer to update global state)
 //putting fetch posts directly as second arg, could also write a mapDispatchToProps
+//this is destructuring, an es6 alternative to writing out a mapDispatchToProps function
 //point is to be able to call this.props.fetchPosts when component mounts in order to fetch our data
 //connect is letting us do that, but it wants to dispatch right away, before our data is retrieved from backend
 //that's why we use thunk, it allows us to be async, we can call dispatch in fetchPosts action when the data is ready

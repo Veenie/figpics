@@ -16,11 +16,13 @@ class PostsController < ApplicationController
 
     #pry to check our params to see if frontend data is coming in
 
-    # def destroy
-    #     @post = Post.find(params[:id])
-    #     @post.destroy
-    # end
-    #not used
+    def destroy
+        #binding.pry
+        @post = Post.find(params[:id])
+        @post.destroy
+        render json: @post
+    end
+    #need to be sure to render json here so frontend can be sent a response so it can delete as well
 
     
     private

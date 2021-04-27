@@ -8,9 +8,9 @@ export const addPost = (data) => {
         body: JSON.stringify(data)
         })
     .then(response => response.json())
-    .then(posts => dispatch({
+    .then(post => dispatch({
         type: 'ADD_POST',
-        payload: posts
+        payload: post
     }))
 
 

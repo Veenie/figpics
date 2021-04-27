@@ -1,13 +1,13 @@
 export default function postReducer(state = {posts: []}, action) {
-    //debugger
+    // debugger
     switch (action.type) {
 
         case 'FETCH_POSTS':
             return {posts: action.payload}
         case 'ADD_POST':
-            return {...state, posts: [...state.posts, action.payload] }
-        // case 'DELETE_POST':
-        //     return { posts: [state.posts.filter(post => post.id !== action.payload.id)]}
+            return { posts: [...state.posts, action.payload] }
+        case 'DELETE_POST':
+            return { posts: state.posts.filter(post => post.id !== action.payload.id)}
         default:
             return state
     }
