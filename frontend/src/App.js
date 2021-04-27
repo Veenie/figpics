@@ -37,4 +37,4 @@ class App extends React.Component {
 export default App;
 
 //setting navbar here at top so it is available everywhere
-//setting our routes
+//setting our routes and what components they are connected to

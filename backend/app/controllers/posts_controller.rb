@@ -22,7 +22,9 @@ class PostsController < ApplicationController
         @post.destroy
         render json: @post
     end
+
     #need to be sure to render json here so frontend can be sent a response so it can delete as well
+    #otherwise only backend will work
 
     
     private

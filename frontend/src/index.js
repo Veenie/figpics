@@ -34,6 +34,8 @@ ReactDOM.render(
 //we will need to use connect in the components themselves to be able to do this
 //wrap App in router so we can set url paths
 
+
+
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
