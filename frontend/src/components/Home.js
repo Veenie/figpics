@@ -2,7 +2,16 @@ import React from 'react';
 
 class Home extends React.Component {
   render() {
-    return <h1>Home!</h1>
+    return <div>
+      <br/>
+      <h1>Welcome to One-Liners!</h1>
+      <h2>The site where you can add your favorite one liners to the collection!</h2>
+      <br/>
+      <h3>First time here? Learn more on the about page!</h3>
+      <h3>If you are ready to get started, check out the one liner section!</h3>
+      <h3>Can't think of one? Check out the links section for helpful resources!</h3>
+      
+      </div>
   }
 }
 

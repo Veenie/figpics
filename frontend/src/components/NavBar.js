@@ -32,7 +32,7 @@ class Navbar extends React.Component {
           activeStyle={{
             background: 'black'
           }}
-        >All Posts</NavLink>
+        >One Liners</NavLink>
         <NavLink
           to="/about"
           exact
