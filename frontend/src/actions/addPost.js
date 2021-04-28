@@ -22,6 +22,6 @@ export const addPost = (data) => {
 
 //data represents our form data's state that was sent on submit
 //can call dispatch function as arg here thanks to thunk
-//very similar to fetch, but post rather than get
-//this will persist to backend but without dispatch, user does not see this without refreshing and triggering new get with componentdidmount
+//very similar to fetch, but post rather than get http verb
+//fetch request will persist to backend but without dispatch, user does not see this without refreshing and triggering new get with componentdidmount
 //need to update the store so frontend can reflect change, so that's why we dispatch to reducer so front end updates as well

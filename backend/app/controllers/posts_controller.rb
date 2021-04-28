@@ -3,6 +3,8 @@ class PostsController < ApplicationController
         @posts = Post.all
         render json: @posts
     end
+
+    #alternate way to do this is render json: Post.all
     
     def create
         #binding.pry
@@ -32,4 +34,6 @@ class PostsController < ApplicationController
     def post_params
         params.require(:post).permit(:name, :text)
     end
+
+    #specify attributes a post can be created with
 end

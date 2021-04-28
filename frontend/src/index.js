@@ -18,6 +18,7 @@ let store = createStore(postReducer, enhancer(applyMiddleware(thunk)))
 //create store returns our store object (global state)
 //we want to pass this down through our app so it's available throughout
 //reducer function required, using optional enhancer argument here to enable thunk middleware
+//need compose to pass more than one thing into second arg of createStore
 
 
 
@@ -30,8 +31,8 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-//Provider gives us the ability to pass our store down to App and it's children
-//we will need to use connect in the components themselves to be able to do this
+//Provider gives us the ability to pass our store down as prop to App and it's children
+//we will need to use connect in the components themselves to be able to map and dispatch w/ store data
 //wrap App in router so we can set url paths
 
 
