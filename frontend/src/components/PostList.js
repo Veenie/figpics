@@ -4,29 +4,40 @@ import { deletePost } from '../actions/deletePost'
 
 
 
-const PostList = (props) => {
+class PostList extends React.Component{
     //console.log(props)
 
-    const handleDelete = (postId) => {
+    state = {votes: 0}
+
+    handleDelete = (postId) => {
         // debugger
-        props.deletePost(postId)
+        this.props.deletePost(postId)
 
     }
 
+    // handleEvent = () => {
+    //     this.setState({votes: this.state.votes + 1})
+    // }
 
+
+    render()   { 
+        
     return(
 
-    <div>  {props.posts.map(post => 
+    <div>  {this.props.posts.map(post => 
     <div key={post.id}>
     <h3> {post.text} </h3>
     <footer>- {post.name}</footer>
-    <button onClick={() => handleDelete(post.id)}>Delete</button>
+    <button onClick={() => this.handleDelete(post.id)}>Delete</button>
+    {/* <button onClick={() => this.handleEvent}>Upvote</button>
+    <h3>{this.state.votes}</h3> */}
     </div>)}
      <br/>
     </div>
     )
 }
 
+}
 export default connect (null, {deletePost})(PostList)
 
 //functional components for displaying posts

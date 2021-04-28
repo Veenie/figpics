@@ -30,6 +30,7 @@ class PostsContainer extends React.Component {
 
 
 
+
 const mapStateToProps = globalState => {
     return {
         posts: globalState.posts
