@@ -16,3 +16,8 @@ class Home extends React.Component {
 }
 
 export default Home; 
+
+//functional components for displaying posts
+//pass props as an argument since not a class, so will not use 'this.props'
+//does not require render, just a return
+//functional components are basically just functions (generally, home is a good example of a simple one)
