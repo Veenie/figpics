@@ -26,6 +26,8 @@ class PostInput extends React.Component {
     //it's like assigning a key to object in console, we use bracket notation to set it
     //event.target.value refers to 'value=' set on each input, telling it what in the state to change
 
+    //ARROW FUNCTION: we use arrow functions because they retain context of 'this'
+
     handleSubmit = (event) => {
         //debugger
         event.preventDefault()

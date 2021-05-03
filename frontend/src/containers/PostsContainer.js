@@ -26,6 +26,8 @@ class PostsContainer extends React.Component {
 }
 
 //render method required, it's a class
+//render must return an element
+//using this container to display components PostInput and PostList
 //passing posts from global state as a prop thanks to mapStateToProps
 
 

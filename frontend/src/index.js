@@ -9,6 +9,9 @@ import { applyMiddleware, createStore, compose } from 'redux'
 import postReducer from './reducers/postReducer'
 import {BrowserRouter as Router} from 'react-router-dom'
 
+//we import content from packages we want to use
+//we also import from components we've written in order to use them here (in this case, render App)
+
 let enhancer =  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 //for our dev tools and middleware
