@@ -14,6 +14,11 @@ class PostsContainer extends React.Component {
     componentDidMount() {
         this.props.fetchPosts()
     }
+
+    //componentDidMount is also only called once, but immediately after the first render() method has taken place
+    //method is typically used to perform any DOM manipulation or data-fetching that the component might need
+    //in this case we are using it to do our initial fetch of the posts from db
+
     render () {
         return (
             <div>
@@ -26,9 +31,10 @@ class PostsContainer extends React.Component {
 }
 
 //render method required, it's a class
-//render must return an element
+//render must return an element (valid jsx)
 //using this container to display components PostInput and PostList
 //passing posts from global state as a prop thanks to mapStateToProps
+//so global state is passed as prop to PostList component
 
 
 

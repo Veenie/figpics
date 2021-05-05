@@ -6,7 +6,7 @@ class PostInput extends React.Component {
     
     state = {name: '', text: ''}
 
-    //local state lets us control form
+    //local state lets us have controlled form (input values derived from state)
     //will use as values for inputs (in jsx tags)
     //without an onChange handler function, the state won't change
 
@@ -19,6 +19,7 @@ class PostInput extends React.Component {
     }
 
     //event passed in automatically when onChange evokes handleChange
+    //setState() provided to react components w/ state, lets React know to re-render
     //we need our inputs to have a name value that matches the keys in our local state
     //to abstract out and use handler for both inputs
     //[event.target.name] refers to those name values set on input
@@ -26,7 +27,8 @@ class PostInput extends React.Component {
     //it's like assigning a key to object in console, we use bracket notation to set it
     //event.target.value refers to 'value=' set on each input, telling it what in the state to change
 
-    //ARROW FUNCTION: we use arrow functions because they retain context of 'this'
+    //ARROW FUNCTION: we use arrow functions because they retain context of 'this' from the method where call happens
+    //context could be lost or changed without arrow function 
 
     handleSubmit = (event) => {
         //debugger
