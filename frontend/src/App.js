@@ -39,4 +39,6 @@ export default App;
 //App is top level component
 //setting navbar here at top so it is available everywhere
 //setting our routes and what components they are connected to
+//setting an attribute of exact, explicitly states the rendered componenent will be seen at that route typed exactly
+//future proof against similar route names
 //export default App allows us to import the App class in other files, only one default export per file

@@ -45,16 +45,19 @@ const mapStateToProps = globalState => {
     }
 }
 
-//this allows children of this container to access the current state of the global store 
+//in mapStateToProps() we specify exactly which slice of the state we want to provide to our component
+//executed with each change to store's state
+//we want children of this container to access the current state of 'posts' in the global store 
 //allows us to set a prop called posts that is equal to the posts in global store, passed to post list in its prop above
 
 export default connect(mapStateToProps, {fetchPosts})(PostsContainer)
 
-//connect is wiring component to global store
-//above used to connect to global store, first arg is reserved for mapstatetoprops, allows access to current global state 
-//second is dispatch, allows changes to be made in children by dispatching actions (which is then sent to reducer to update global state)
+//connect() function allows us to specify which data we are listening to (through mapStateToProps), and which component we are providing the data
+//first arg is reserved for mapstatetoprops, allows access to global state as seen above 
+//second arg is dispatch, allows changes to be made in children by dispatching actions (which is then sent to reducer to update global state)
 //putting fetch posts directly as second arg, could also write a mapDispatchToProps
 //this is destructuring, an es6 alternative to writing out a mapDispatchToProps function
+//when there's no second arg, you are provided the ability to use disptch prop by connect
 //point is to be able to call this.props.fetchPosts when component mounts in order to fetch our data
 //connect is letting us do that, but it wants to dispatch right away, before our data is retrieved from backend
 //that's why we use thunk, it allows us to be async, we can call dispatch in fetchPosts action when the data is ready

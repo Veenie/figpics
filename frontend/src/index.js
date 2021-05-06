@@ -12,17 +12,17 @@ import {BrowserRouter as Router} from 'react-router-dom'
 //we import content from packages we want to use
 //we also import from components we've written in order to use them here (in this case, render App)
 
+
 let enhancer =  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 //for our dev tools and middleware
 
 let store = createStore(postReducer, enhancer(applyMiddleware(thunk)))
 
-//create store returns our store object (global state)
+//create store function returns instance of our redux store object (global state)
 //we want to pass this down through our app so it's available throughout
 //reducer function required, using optional enhancer argument here to enable thunk middleware
 //need compose to pass more than one thing into second arg of createStore
-
 
 
 ReactDOM.render(
@@ -34,8 +34,11 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-//Provider gives us the ability to pass our store down as prop to App and it's children
-//we will need to use connect in the components themselves to be able to map and dispatch w/ store data
+//index.js file is where ReactDOM renders our application
+//To avoid passing store as a prop, we use the Provider component, imported from react-redux. 
+//The Provider component wraps the top level component (App) and is the only component where store is passed in
+//will be able to access our store and/or dispatch actions from any component we want, regardless of where it is on component tree.
+//we will need to use 'connect' function in a component's export statement to be able to map and dispatch w/ store data
 //wrap App in router so we can set url paths
 
 
