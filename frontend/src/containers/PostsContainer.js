@@ -54,7 +54,7 @@ export default connect(mapStateToProps, {fetchPosts})(PostsContainer)
 
 //connect() function allows us to specify which data we are listening to (through mapStateToProps), and which component we are providing the data
 //first arg is reserved for mapstatetoprops, allows access to global state as seen above 
-//second arg is dispatch, allows changes to be made in children by dispatching actions (which is then sent to reducer to update global state)
+//second arg is dispatch, allows changes to be made to global state by dispatching actions (which is then sent to reducer to update global state)
 //putting fetch posts directly as second arg, could also write a mapDispatchToProps
 //this is destructuring, an es6 alternative to writing out a mapDispatchToProps function
 //when there's no second arg, you are provided the ability to use disptch prop by connect

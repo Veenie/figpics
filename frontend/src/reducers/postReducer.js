@@ -15,10 +15,10 @@ export default function postReducer(state = {posts: []}, action) {
 
 }
 //reducers are functions that recieve the previous state and action from dispatch
-//dispatch is how we crud by changing global state
+//dispatching actions is how we crud by changing global state
 //reduce into a new state to replace the old, do not mutate directly (like making a copy and revising it)
 //state initially set as object with posts key pointing to empty array
 //set default in switcher to return state so something is always returned
-//in fetch posts, new state is set to the payload from fetch (payload is the json response) rather than empty array
+//in fetch posts, new state is set to the payload from fetch (payload is the db response) rather than empty array
 //in add_post, using spread operator to say our posts array includes all previous data, plus newly added post
 //in delete_post, we use filter and strict inequality to return everything that does NOT match id in the payload

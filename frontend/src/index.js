@@ -10,7 +10,7 @@ import postReducer from './reducers/postReducer'
 import {BrowserRouter as Router} from 'react-router-dom'
 
 //we import content from packages we want to use
-//we also import from components we've written in order to use them here (in this case, render App)
+//we also import from components we've written in order to use them here (in this case, App)
 
 
 let enhancer =  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -19,7 +19,7 @@ let enhancer =  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 let store = createStore(postReducer, enhancer(applyMiddleware(thunk)))
 
-//create store function returns instance of our redux store object (global state)
+//create store function returns instance of redux store object (global state)
 //we want to pass this down through our app so it's available throughout
 //reducer function required, using optional enhancer argument here to enable thunk middleware
 //need compose to pass more than one thing into second arg of createStore

@@ -41,6 +41,7 @@ class PostInput extends React.Component {
     //upon submission, connect to proper action to add post to db
     //prevent default to stop redirect
     //we send the state as it is upon submission (changed by the form inputs) to addPost action
+    //so it can go to db and global store
     //set state back to empty strings to clear out form
     //set state is async so we could even put it higher and it won't interfere
 
