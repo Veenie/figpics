@@ -3,7 +3,6 @@ import PostList from '../components/PostList'
 import PostInput from '../components/PostInput'
 import {connect} from 'react-redux'
 import {fetchPosts} from '../actions/fetchPosts'
-// import SearchBar from '../components/Search';
 
 
 // when importing, double period to get from different folder, also getting the names right
@@ -26,7 +25,6 @@ class PostsContainer extends React.Component {
                 <PostInput/>
                 <PostList posts={this.props.posts}/>
                 {/* {console.log(this.props.posts)} */}
-                {/* <SearchBar posts={this.props.posts}/> */}
             </div>
         )
     }
