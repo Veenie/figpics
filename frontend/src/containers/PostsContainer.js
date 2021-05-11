@@ -12,6 +12,7 @@ import {fetchPosts} from '../actions/fetchPosts'
 class PostsContainer extends React.Component {
 
     componentDidMount() {
+        
         this.props.fetchPosts()
     }
 
@@ -39,18 +40,18 @@ class PostsContainer extends React.Component {
 
 
 
-const mapStateToProps = globalState => {
-    return {
-        posts: globalState.posts
-    }
-}
+// const mapStateToProps = globalState => {
+//     return {
+//         posts: globalState.posts
+//     }
+// }
 
 //in mapStateToProps() we specify exactly which slice of the state we want to provide to our component
 //executed with each change to store's state
 //we want children of this container to access the current state of 'posts' in the global store 
 //allows us to set a prop called posts that is equal to the posts in global store, passed to post list in its prop above
 
-export default connect(mapStateToProps, {fetchPosts})(PostsContainer)
+export default connect(state => ({posts: state.posts}), {fetchPosts})(PostsContainer)
 
 //connect() function allows us to specify which data we are listening to (through mapStateToProps), and which component we are providing the data
 //first arg is reserved for mapstatetoprops, allows access to global state as seen above 

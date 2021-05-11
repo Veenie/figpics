@@ -9,6 +9,7 @@ import Home from './components/Home'
 import About from './components/About'
 import Navbar from './components/NavBar'
 import Links from './components/Links'
+import SearchBar from './components/Search'
 class App extends React.Component {
   
   
@@ -27,6 +28,7 @@ class App extends React.Component {
       <Route exact path="/" component={Home} />
       <Route exact path="/about" component={About} />
       <Route exact path="/posts" component={PostsContainer} />
+      <Route exact path="/search" component={SearchBar} />
       <Route exact path="/links" component={Links} />
     </div>
   );
