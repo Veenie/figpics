@@ -33,14 +33,14 @@ class Navbar extends React.Component {
             background: 'black'
           }}
         >One Liners</NavLink>
-                <NavLink
+                {/* <NavLink
           to="/search"
           exact
           style={link}
           activeStyle={{
             background: 'black'
           }}
-        >Search</NavLink>
+        >Search</NavLink> */}
         <NavLink
           to="/about"
           exact
