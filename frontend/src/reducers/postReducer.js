@@ -14,7 +14,9 @@ export default function postReducer(state = {posts: []}, action) {
     
 
 }
-//reducers are functions that recieve the previous state and action from dispatch
+//reducers are functions that recieve the previous state and action from dispatch, reduce them into new state
+//returns newly updated state, do not mutate state directly, return new state
+//the previouly returned state becomes previous state argument next time reducer changes state
 //dispatching actions is how we crud by changing global state
 //reduce into a new state to replace the old, do not mutate directly (like making a copy and revising it)
 //state initially set as object with posts key pointing to empty array
