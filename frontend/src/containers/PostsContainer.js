@@ -17,6 +17,7 @@ class PostsContainer extends React.Component {
     }
 
     //componentDidMount is also only called once, but immediately after the first render() method has taken place
+    //can only be called because this is a class component, it has access to lifecycle methods, functional do not (can use hooks instead)
     //method is typically used to perform any DOM manipulation or data-fetching that the component might need
     //in this case we are using it to do our initial fetch of the posts from db
 
