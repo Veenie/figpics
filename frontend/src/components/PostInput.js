@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {addPost} from '../actions/addPost'
 
+
 class PostInput extends React.Component {
     
     state = {name: '', text: ''}
