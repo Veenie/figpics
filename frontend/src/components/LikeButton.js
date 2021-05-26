@@ -14,7 +14,7 @@ addLike = () => {
     render() {
     return <div>
       <br/>
-<button type='LikeButton' onClick={this.addLike}>Like: {this.state.likes}</button>
+<button type='LikeButton' onClick={this.addLike}>❤ {this.state.likes}</button>
       </div>;
   }
 }

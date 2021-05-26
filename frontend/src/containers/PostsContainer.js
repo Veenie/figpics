@@ -24,7 +24,11 @@ class PostsContainer extends React.Component {
     render () {
         return (
             <div>
+                
+                <h3>Add Your One Liner:</h3>
                 <PostInput/>
+                <br/>
+                <h1>Epic One Liners</h1>
                 <PostList posts={this.props.posts}/>
                 {/* {console.log(this.props.posts)} */}
             </div>
