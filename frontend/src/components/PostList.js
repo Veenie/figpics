@@ -4,28 +4,23 @@ import { deletePost } from '../actions/deletePost'
 import LikeButton from './LikeButton'
 
 
-
-class PostList extends React.Component{
+const PostList = (props) => {
     //console.log(props)
 
-
-
-    handleDelete = (postId) => {
+    const handleDelete = (postId) => {
         // debugger
-        this.props.deletePost(postId)
-
+        props.deletePost(postId)
     }
 
 
-    render()   { 
+     
         
     return(
-
-    <div>  {this.props.posts.map(post => 
+    <div>  {props.posts.map(post => 
     <div key={post.id}>
     <h3> {post.text} </h3>
     <footer>- {post.name}</footer>
-    <button onClick={() => this.handleDelete(post.id)}>Delete</button>
+    <button onClick={() => handleDelete(post.id)}>Delete</button>
     <LikeButton />
     </div>)}
      <br/>
@@ -33,6 +28,5 @@ class PostList extends React.Component{
     )
 }
 
-}
 export default connect (null, {deletePost})(PostList)
 
