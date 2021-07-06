@@ -1,16 +1,11 @@
 import React from 'react'
-import {connect} from 'react-redux'
-import { deletePost } from '../actions/deletePost'
+
+import DeleteButton from './DeleteButton'
 import LikeButton from './LikeButton'
 
 
 const PostList = (props) => {
     //console.log(props)
-
-    const handleDelete = (postId) => {
-        // debugger
-        props.deletePost(postId)
-    }
 
 
      
@@ -20,7 +15,7 @@ const PostList = (props) => {
     <div key={post.id}>
     <h3> {post.text} </h3>
     <footer>- {post.name}</footer>
-    <button onClick={() => handleDelete(post.id)}>Delete</button>
+    <DeleteButton postId={post.id} />
     <LikeButton />
     </div>)}
      <br/>
@@ -28,5 +23,5 @@ const PostList = (props) => {
     )
 }
 
-export default connect (null, {deletePost})(PostList)
+export default PostList
 
