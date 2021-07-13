@@ -1,7 +1,7 @@
 import React from 'react'
 
 import DeleteButton from './DeleteButton'
-import LikeButton from './LikeButton'
+
 
 
 const PostList = (props) => {
@@ -16,7 +16,7 @@ const PostList = (props) => {
     <h3> {post.text} </h3>
     <footer>- {post.name}</footer>
     <DeleteButton postId={post.id} />
-    <LikeButton />
+
     </div>)}
      <br/>
     </div>
